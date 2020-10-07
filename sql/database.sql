@@ -9,6 +9,11 @@ CREATE TABLE bike
         purchase_date	DATETIME,
         purchase_price	NUMERIC(8,2),
         serial_number	VARCHAR(256)
+    );
+
+CREATE TABLE hibernate_sequence
+    (
+        next_val BIGINT
     ); 
 
 INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
@@ -17,3 +22,5 @@ INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchas
   VALUES (2, 0, 'samantha@bikes.com', 'Globo Carbon Fiber Race Series', 'Samantha Davis', '448-397-5555', '2020-10-07 09:00:00', '1999');
 INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
   VALUES (3, 1, 'dave@bikes.com', 'Globo Time Trial Blade', 'Dave Warren', '563-891-5555', '2020-10-07 10:00:00', '2100');
+
+INSERT INTO hibernate_sequence (next_val) VALUES (4);
